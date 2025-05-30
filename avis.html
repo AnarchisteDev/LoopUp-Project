@@ -39,42 +39,14 @@
   <header class="bg-gradient-to-br from-red-500 to-pink-600 py-20 px-6 text-center">
     <h1 class="text-5xl md:text-6xl font-extrabold mb-4">LoopUp</h1>
     <p class="text-xl md:text-2xl mb-6">Défis sportifs quotidiens. Progrès concrets. En solo ou entre amis.</p>
+  </header>
 
   <main class="flex-grow max-w-4xl mx-auto px-6 py-12">
     <section class="mb-12">
       <h2 class="text-4xl font-bold mb-8 text-center">Avis sur notre application</h2>
 
       <div id="reviewsList" class="space-y-8">
-        <!-- Avis existants -->
-        <article
-          class="bg-gray-900 border border-gray-800 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-300">
-          <div class="flex justify-center mb-4 text-red-500 text-2xl">
-            <span>★★★★★</span>
-          </div>
-          <p class="text-gray-300 text-lg mb-4 text-center">Cette application a changé ma façon de travailler. Très
-            intuitive et rapide.</p>
-          <footer class="text-gray-500 text-center font-semibold">— Julie M.</footer>
-        </article>
-
-        <article
-          class="bg-gray-900 border border-gray-800 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-300">
-          <div class="flex justify-center mb-4 text-red-500 text-2xl">
-            <span>★★★★☆</span>
-          </div>
-          <p class="text-gray-300 text-lg mb-4 text-center">Très bon outil, le support client est réactif. Je recommande
-            !</p>
-          <footer class="text-gray-500 text-center font-semibold">— Ahmed B.</footer>
-        </article>
-
-        <article
-          class="bg-gray-900 border border-gray-800 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-300">
-          <div class="flex justify-center mb-4 text-red-500 text-2xl">
-            <span>★★★★★</span>
-          </div>
-          <p class="text-gray-300 text-lg mb-4 text-center">Simple d'utilisation et très efficace. Parfait pour mes
-            besoins quotidiens.</p>
-          <footer class="text-gray-500 text-center font-semibold">— Claire D.</footer>
-        </article>
+        <!-- Les avis seront insérés ici par JS -->
       </div>
     </section>
 
@@ -116,51 +88,105 @@
   </main>
 
   <footer class="bg-gray-900 py-12 text-white">
-  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center md:text-left">
-    
-    <!-- Logo + Description -->
-    <div>
-      <h2 class="text-2xl font-bold mb-2">LoopUp</h2>
-      <p>Votre plateforme de défis sportifs</p>
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center md:text-left">
+
+      <!-- Logo + Description -->
+      <div>
+        <h2 class="text-2xl font-bold mb-2">LoopUp</h2>
+        <p>Votre plateforme de défis sportifs</p>
+      </div>
+
+      <!-- Liens rapides -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Liens rapides</h3>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="hover:text-red-500 transition">Accueil</a></li>
+          <li><a href="qui-sommes-nous.html" class="hover:text-red-500 transition">Qui sommes-nous</a></li>
+          <li><a href="avis.html" class="hover:text-red-500 transition">Avis</a></li>
+        </ul>
+      </div>
+
+      <!-- Réseaux sociaux -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Suivez-nous</h3>
+        <div class="flex justify-center md:justify-start space-x-4">
+          <a href="#" target="_blank" class="hover:scale-110 transition-transform">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter" class="w-6 h-6 filter invert" />
+          </a>
+          <a href="#" target="_blank" class="hover:scale-110 transition-transform">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" class="w-6 h-6 filter invert" />
+          </a>
+          <a href="#" target="_blank" class="hover:scale-110 transition-transform">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok" class="w-6 h-6 filter invert" />
+          </a>
+        </div>
+      </div>
+
     </div>
 
-    <!-- Liens rapides -->
-    <div>
-      <h3 class="text-lg font-semibold mb-3">Liens rapides</h3>
-      <ul class="space-y-2">
-        <li><a href="index.html" class="hover:text-red-500 transition">Accueil</a></li>
-        <li><a href="qui-sommes-nous.html" class="hover:text-red-500 transition">Qui sommes-nous</a></li>
-        <li><a href="avis.html" class="hover:text-red-500 transition">Avis</a></li>
-      </ul>
+    <div class="mt-10 text-center text-sm text-gray-400">
+      © 2025 LoopUp. Créé avec ❤️ par des passionnés.
     </div>
-
-    <!-- Réseaux sociaux -->
-<div>
-  <h3 class="text-lg font-semibold mb-3">Suivez-nous</h3>
-  <div class="flex justify-center md:justify-start space-x-4">
-    <a href="#" target="_blank" class="hover:scale-110 transition-transform">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter" class="w-6 h-6 filter invert" />
-    </a>
-    <a href="#" target="_blank" class="hover:scale-110 transition-transform">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" class="w-6 h-6 filter invert" />
-    </a>
-    <a href="#" target="_blank" class="hover:scale-110 transition-transform">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok" class="w-6 h-6 filter invert" />
-    </a>
-  </div>
-</div>
-
-  </div>
-
-  <div class="mt-10 text-center text-sm text-gray-400">
-    © 2025 LoopUp. Créé avec ❤️ par des passionnés.
-  </div>
-</footer>
+  </footer>
 
   <script>
-    // Formulaire simple sans backend - ajout dynamique dans la page
-    const form = document.getElementById('reviewForm');
     const reviewsList = document.getElementById('reviewsList');
+    const form = document.getElementById('reviewForm');
+
+    // Avis par défaut sur le thème sportif
+    const defaultReviews = [
+      {
+        name: "Lucas T.",
+        rating: 5,
+        comment: "Grâce à LoopUp, j'ai amélioré mon endurance et ma vitesse. Une application indispensable pour tous les sportifs !"
+      },
+      {
+        name: "Mélanie R.",
+        rating: 4,
+        comment: "Les défis quotidiens motivent vraiment à dépasser ses limites. Très intuitive et agréable à utiliser."
+      },
+      {
+        name: "Antoine G.",
+        rating: 5,
+        comment: "J'aime pouvoir suivre mes progrès et comparer avec mes amis. LoopUp est devenue mon coach personnel."
+      }
+    ];
+
+    // Fonction pour générer les étoiles ★ et ☆
+    function createStars(rating) {
+      return "★★★★★".slice(0, rating) + "☆☆☆☆☆".slice(rating, 5);
+    }
+
+    // Fonction pour afficher un avis dans la page
+    function addReviewToDOM({ name, rating, comment }) {
+      const article = document.createElement('article');
+      article.className =
+        "bg-gray-900 border border-gray-800 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-300";
+
+      article.innerHTML = `
+        <div class="flex justify-center mb-4 text-red-500 text-2xl">${createStars(rating)}</div>
+        <p class="text-gray-300 text-lg mb-4 text-center">${comment}</p>
+        <footer class="text-gray-500 text-center font-semibold">— ${name}</footer>
+      `;
+
+      reviewsList.appendChild(article);
+    }
+
+    // Chargement des avis depuis localStorage, ou par défaut sinon
+    function loadReviews() {
+      reviewsList.innerHTML = "";
+      const stored = localStorage.getItem("reviews");
+      let reviews = stored ? JSON.parse(stored) : defaultReviews;
+      reviews.forEach(addReviewToDOM);
+      return reviews;
+    }
+
+    // Sauvegarde des avis dans localStorage
+    function saveReviews(reviews) {
+      localStorage.setItem("reviews", JSON.stringify(reviews));
+    }
+
+    let reviews = loadReviews();
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -174,21 +200,17 @@
         return;
       }
 
-      // Création étoiles (ex : 4 → ★★★★☆)
-      const stars = '★★★★★'.slice(0, rating) + '☆☆☆☆☆'.slice(rating);
+      const newReview = { name, rating, comment };
 
-      // Création article avis
-      const article = document.createElement('article');
-      article.className =
-        "bg-gray-900 border border-gray-800 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-300";
-      article.innerHTML = `
-        <div class="flex justify-center mb-4 text-red-500 text-2xl">${stars}</div>
-        <p class="text-gray-300 text-lg mb-4 text-center">${comment}</p>
-        <footer class="text-gray-500 text-center font-semibold">— ${name}</footer>
-      `;
+      // Ajouter en début du tableau
+      reviews.unshift(newReview);
 
-      // Ajout en haut de la liste
-      reviewsList.insertBefore(article, reviewsList.firstChild);
+      // Sauvegarder
+      saveReviews(reviews);
+
+      // Réafficher
+      reviewsList.innerHTML = "";
+      reviews.forEach(addReviewToDOM);
 
       // Reset form
       form.reset();
