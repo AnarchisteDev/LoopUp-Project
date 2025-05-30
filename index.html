@@ -1,0 +1,128 @@
+<!DOCTYPE html> 
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LoopUp</title>
+  <link href="style.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-950 text-white flex flex-col min-h-screen">
+
+  <!-- Navigation -->
+  <nav class="bg-gray-900 border-b border-gray-800">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="index.html">
+            <img src="fb4c277b-1f51-4181-989d-cc79e57db35a.png" alt="Logo LoopUp" class="h-12 md:h-16 lg:h-20 w-auto">
+          </a>
+        </div>
+
+        <div class="hidden md:flex space-x-8 text-lg font-semibold">
+          <a href="index.html"
+            class="text-red-500 border-b-2 border-red-500 px-3 py-2 rounded-md" aria-current="page">Accueil</a>
+          <a href="qui-sommes-nous.html"
+            class="text-gray-300 hover:text-red-500 transition-colors duration-300 px-3 py-2 rounded-md">Qui
+            sommes-nous</a>
+          <a href="avis.html"
+            class="text-gray-300 hover:text-red-500 transition-colors duration-300 px-3 py-2 rounded-md">Avis</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-grow">
+    <section class="text-center py-24 px-4 bg-gradient-to-br from-red-500 to-pink-600">
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-6">LoopUp</h1>
+      <p class="text-xl md:text-2xl mb-8">
+        Défis sportifs quotidiens. Progrès concrets. En solo ou entre amis.
+      </p>
+      <a href="beta.html"
+        class="inline-block bg-white text-black font-bold px-6 py-3 rounded-2xl hover:bg-gray-200 text-lg">
+        Rejoindre la beta
+      </a>
+    </section>
+
+    <section class="py-20 px-4 max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+      <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center">
+        <div class="mb-4 text-red-500">
+          <i class="lucide lucide-check-circle" style="width: 36px; height: 36px;"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Micro-défis</h3>
+        <p class="text-gray-400">Améliore-toi chaque jour grâce à des défis sportifs simples, accessibles et efficaces.</p>
+      </div>
+      <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center">
+        <div class="mb-4 text-red-500">
+          <i class="lucide lucide-users" style="width: 36px; height: 36px;"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Entre amis</h3>
+        <p class="text-gray-400">Lance des challenges à tes potes et grimpez ensemble le classement.</p>
+      </div>
+      <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center">
+        <div class="mb-4 text-red-500">
+          <i class="lucide lucide-rocket" style="width: 36px; height: 36px;"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Récompenses</h3>
+        <p class="text-gray-400">Gagne des points et échange-les contre des avantages Revolut.</p>
+      </div>
+    </section>
+
+    <section class="bg-gray-900 py-16 text-center">
+      <h2 class="text-3xl font-bold mb-4">Prépare-toi à te challenger tous les jours</h2>
+      <p class="text-gray-400 mb-6">Disponible bientôt sur iOS et Android</p>
+      <a href="avis.html"
+        class="bg-red-500 hover:bg-red-600 px-6 py-3 text-lg font-semibold rounded-2xl inline-block">
+        Avis
+      </a>
+    </section>
+  </main>
+
+  <footer class="bg-white py-12">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center md:text-left text-black">
+    
+    <!-- Logo + Description -->
+    <div>
+      <h2 class="text-2xl font-bold mb-2">LoopUp</h2>
+      <p>Votre plateforme de défis sportifs</p>
+    </div>
+
+    <!-- Liens rapides -->
+    <div>
+      <h3 class="text-lg font-semibold mb-3">Liens rapides</h3>
+      <ul class="space-y-2">
+        <li><a href="index.html" class="hover:text-red-500 transition">Accueil</a></li>
+        <li><a href="qui-sommes-nous.html" class="hover:text-red-500 transition">Qui sommes-nous</a></li>
+        <li><a href="avis.html" class="hover:text-red-500 transition">Avis</a></li>
+      </ul>
+    </div>
+
+    <!-- Réseaux sociaux -->
+    <div>
+      <h3 class="text-lg font-semibold mb-3">Suivez-nous</h3>
+      <div class="flex justify-center md:justify-start space-x-4">
+        <a href="#" target="_blank" class="hover:scale-110 transition-transform">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter" class="w-6 h-6" />
+        </a>
+        <a href="#" target="_blank" class="hover:scale-110 transition-transform">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" class="w-6 h-6" />
+        </a>
+        <a href="#" target="_blank" class="hover:scale-110 transition-transform">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok" class="w-6 h-6" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-10 text-center text-sm text-black">
+    © 2025 LoopUp. Créé avec ❤️ par des passionnés.
+  </div>
+</footer>
+
+</body>
+
+</html>

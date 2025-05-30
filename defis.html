@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Défis Sportifs - LoopUp</title>
+  <link href="style.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-950 text-white min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-br from-red-500 to-pink-600 p-6 text-center">
+    <h1 class="text-4xl font-extrabold">🏅 Défis Sportifs</h1>
+    <p class="mt-2 text-lg">Relève un défi chaque jour pour bouger et progresser !</p>
+    <a href="index.html" class="mt-4 inline-block text-white underline hover:text-gray-200 text-sm">← Retour à l’accueil</a>
+  </header>
+
+  <!-- Main -->
+  <main class="flex-grow max-w-5xl mx-auto px-4 py-12">
+
+    <!-- Barre de recherche et filtres -->
+    <div class="mb-6 flex flex-col sm:flex-row items-center gap-4">
+      <input id="searchInput" type="text" placeholder="Rechercher un défi..."
+        class="w-full sm:w-2/3 px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-red-500" />
+      
+      <div id="filterButtons" class="flex flex-wrap gap-2">
+        <button data-type="all" class="filter-btn px-4 py-2 bg-red-500 hover:bg-red-600 rounded-full">Tous</button>
+        <button data-type="cardio" class="filter-btn px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-full">Cardio</button>
+        <button data-type="muscu" class="filter-btn px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-full">Musculation</button>
+        <button data-type="souplesse" class="filter-btn px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-full">Souplesse</button>
+        <button data-type="equilibre" class="filter-btn px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-full">Équilibre</button>
+        <button data-type="endurance" class="filter-btn px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-full">Endurance</button>
+        <button data-type="mobilite" class="filter-btn px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-full">Mobilité</button>
+        <button data-type="relaxation" class="filter-btn px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-full">Relaxation</button>
+      </div>
+    </div>
+
+    <!-- Bouton générer de nouveaux défis -->
+    <div class="mb-8 text-center">
+      <button id="btnGenerate" class="px-6 py-3 bg-red-600 hover:bg-red-700 rounded-full text-lg font-semibold shadow-lg transition-colors duration-300">
+        🔁 Générer de nouveaux défis
+      </button>
+    </div>
+
+    <!-- Défis -->
+    <section id="defiList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Les défis seront affichés ici dynamiquement -->
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white py-12">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center md:text-left text-black">
+    
+    <!-- Logo + Description -->
+    <div>
+      <h2 class="text-2xl font-bold mb-2">LoopUp</h2>
+      <p>Votre plateforme de défis sportifs</p>
+    </div>
+
+    <!-- Liens rapides -->
+    <div>
+      <h3 class="text-lg font-semibold mb-3">Liens rapides</h3>
+      <ul class="space-y-2">
+        <li><a href="index.html" class="hover:text-red-500 transition">Accueil</a></li>
+        <li><a href="qui-sommes-nous.html" class="hover:text-red-500 transition">Qui sommes-nous</a></li>
+        <li><a href="avis.html" class="hover:text-red-500 transition">Avis</a></li>
+      </ul>
+    </div>
+
+    <!-- Réseaux sociaux -->
+    <div>
+      <h3 class="text-lg font-semibold mb-3">Suivez-nous</h3>
+      <div class="flex justify-center md:justify-start space-x-4">
+        <a href="#" target="_blank" class="hover:scale-110 transition-transform">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter" class="w-6 h-6" />
+        </a>
+        <a href="#" target="_blank" class="hover:scale-110 transition-transform">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" class="w-6 h-6" />
+        </a>
+        <a href="#" target="_blank" class="hover:scale-110 transition-transform">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok" class="w-6 h-6" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-10 text-center text-sm text-black">
+    © 2025 LoopUp. Créé avec ❤️ par des passionnés.
+  </div>
+</footer>
+
+  <!-- Script filtre, recherche & interaction -->
+  <script>
+    const defis = [
+      { id: "defi1", type: "cardio", titre: "🏃‍♂️ Courir 2 km", desc: "Un petit run pour bien démarrer la journée." },
+      { id: "defi2", type: "muscu", titre: "💪 30 pompes", desc: "Renforce ton haut du corps avec efficacité." },
+      { id: "defi3", type: "muscu", titre: "🦵 50 squats", desc: "Travaille tes jambes et ton endurance." },
+      { id: "defi4", type: "souplesse", titre: "🧘 10 min d’étirements", desc: "Améliore ta mobilité et préviens les blessures." },
+      { id: "defi5", type: "cardio", titre: "🚴 20 min de vélo", desc: "Travail cardio à l’extérieur ou sur home-trainer." },
+      { id: "defi6", type: "muscu", titre: "🏋️ Circuit training x3", desc: "Enchaîne des exercices pour un full body complet." },
+      { id: "defi7", type: "equilibre", titre: "🤸‍♂️ 5 min de gainage", desc: "Renforce ton centre de gravité pour mieux t’équilibrer." },
+      { id: "defi8", type: "endurance", titre: "🏊 15 min de natation", desc: "Améliore ta capacité respiratoire." },
+      { id: "defi9", type: "mobilite", titre: "🦶 Marche sur la pointe des pieds 5 min", desc: "Travaille ta mobilité et ton équilibre." },
+      { id: "defi10", type: "relaxation", titre: "🛀 Bain chaud + méditation 15 min", desc: "Décompresse et récupère." },
+      { id: "defi11", type: "cardio", titre: "⛹️‍♀️ 10 min de corde à sauter", desc: "Boost ton cardio rapidement." },
+      { id: "defi12", type: "muscu", titre: "🏋️‍♂️ 3 séries de tractions", desc: "Renforce ton dos et tes bras." },
+      { id: "defi13", type: "souplesse", titre: "🤸 Étirements des jambes 10 min", desc: "Améliore ta souplesse et ton confort." },
+      { id: "defi14", type: "equilibre", titre: "🦵 1 min sur une jambe", desc: "Travaille ton équilibre et ta coordination." },
+      { id: "defi15", type: "endurance", titre: "🚶 Marche rapide 30 min", desc: "Augmente ton endurance générale." },
+      { id: "defi16", type: "mobilite", titre: "🧘 Yoga flow 15 min", desc: "Améliore la mobilité de tout ton corps." },
+      { id: "defi17", type: "relaxation", titre: "💤 Sieste réparatrice 20 min", desc: "Récupère pour mieux performer." },
+      { id: "defi18", type: "cardio", titre: "🏃‍♀️ Montées de genoux 3x30s", desc: "Travail cardio et jambes." },
+      { id: "defi19", type: "muscu", titre: "💪 Dips x20", desc: "Travaille tes triceps et épaules." },
+      { id: "defi20", type: "souplesse", titre: "🧘 Étirements dos 10 min", desc: "Préviens les douleurs dorsales." },
+      { id: "defi21", type: "cardio", titre: "🚶‍♂️ Marche rapide 15 min", desc: "Augmente le rythme cardiaque." },
+      { id: "defi22", type: "muscu", titre: "💪 Planche 1 min", desc: "Renforce la ceinture abdominale." },
+      { id: "defi23", type: "souplesse", titre: "🧘‍♂️ Étirements bras 5 min", desc: "Améliore la flexibilité des bras." },
+      { id: "defi24", type: "equilibre", titre: "🤸‍♀️ Yoga équilibre 10 min", desc: "Travaille la stabilité et la concentration." },
+      { id: "defi25", type: "relaxation", titre: "🛌 Respiration profonde 10 min", desc: "Réduit le stress et la tension." }
+    ];
+
+    let derniersDefis = [];
+    let filtreActif = 'all';
+
+    // Mélange un tableau
+    function melanger(array) {
+      return array
+        .map(a => ({sort: Math.random(), value: a}))
+        .sort((a, b) => a.sort - b.sort)
+        .map(a => a.value);
+    }
+
+    // Générer défis selon filtre et recherche
+    function genererDefis(nb = 3, filtre = 'all', recherche = '') {
+      let defisFiltres = defis;
+
+      // Appliquer filtre par type
+      if (filtre !== 'all') {
+        defisFiltres = defisFiltres.filter(d => d.type === filtre);
+      }
+
+      // Appliquer recherche (dans titre et description)
+      if (recherche.trim() !== '') {
+        const mot = recherche.toLowerCase();
+        defisFiltres = defisFiltres.filter(d =>
+          d.titre.toLowerCase().includes(mot) || d.desc.toLowerCase().includes(mot)
+        );
+      }
+
+      // Choisir aléatoirement nb défis
+      const defisMelanges = melanger(defisFiltres);
+      return defisMelanges.slice(0, nb);
+    }
+
+    // Afficher défis
+    function afficherDefis(listeDefis) {
+      const container = document.getElementById('defiList');
+      container.innerHTML = ''; // Vide l'existant
+
+      if (listeDefis.length === 0) {
+        container.innerHTML = '<p class="col-span-full text-center text-gray-400">Aucun défi trouvé.</p>';
+        return;
+      }
+
+      for (const d of listeDefis) {
+        const card = document.createElement('article');
+        card.className = "bg-gray-900 rounded-xl shadow-md p-6 border border-gray-700 hover:border-red-600 transition-colors cursor-pointer";
+
+        card.innerHTML = `
+          <h3 class="text-2xl font-bold mb-2">${d.titre}</h3>
+          <p class="text-gray-400">${d.desc}</p>
+          <span class="inline-block mt-3 px-3 py-1 text-sm rounded-full bg-red-600 text-white">${d.type.charAt(0).toUpperCase() + d.type.slice(1)}</span>
+        `;
+        container.appendChild(card);
+      }
+    }
+
+    // Met à jour la classe active sur le bouton filtre
+    function majBoutonFiltreActif(type) {
+      const boutons = document.querySelectorAll('.filter-btn');
+      boutons.forEach(btn => {
+        if (btn.dataset.type === type) {
+          btn.classList.add('bg-red-500');
+          btn.classList.remove('bg-gray-800');
+        } else {
+          btn.classList.remove('bg-red-500');
+          btn.classList.add('bg-gray-800');
+        }
+      });
+    }
+
+    // Mise à jour du filtre actif (type)
+    function setFiltre(type) {
+      filtreActif = type;
+      majBoutonFiltreActif(type);
+      const recherche = document.getElementById('searchInput').value;
+      // Affiche 6 défis filtrés et selon recherche pour la vue principale
+      afficherDefis(genererDefis(6, filtreActif, recherche));
+    }
+
+    // Initialisation
+    document.addEventListener('DOMContentLoaded', () => {
+      const btnGenerate = document.getElementById('btnGenerate');
+      const searchInput = document.getElementById('searchInput');
+      const filterButtons = document.getElementById('filterButtons');
+
+      // Affiche la liste complète de 6 défis au démarrage (filtre 'all')
+      afficherDefis(genererDefis(6));
+
+      // Clic sur générer : génère 3 défis aléatoires selon filtre + recherche
+      btnGenerate.addEventListener('click', () => {
+        const recherche = searchInput.value;
+        const nouveauxDefis = genererDefis(3, filtreActif, recherche);
+        derniersDefis = nouveauxDefis;
+        afficherDefis(nouveauxDefis);
+      });
+
+      // Clic sur filtre
+      filterButtons.addEventListener('click', (e) => {
+        if (e.target.classList.contains('filter-btn')) {
+          setFiltre(e.target.dataset.type);
+        }
+      });
+
+      // Recherche dynamique
+      searchInput.addEventListener('input', () => {
+        const recherche = searchInput.value;
+        afficherDefis(genererDefis(6, filtreActif, recherche));
+      });
+
+      // Initial highlight filtre
+      majBoutonFiltreActif('all');
+    });
+  </script>
+
+</body>
+</html>
